@@ -14,6 +14,16 @@ public class EncryptedNotification extends Notification {
                 .encodeToString(
                         message.getBytes(StandardCharsets.UTF_8)
                 );
+
+        if (sender.isAvailable()) {
+            sender.sendMessage(
+                    recipient,
+                    "Encrypted Notification",
+                    encryptedMessage
+            );
+        } else {
+            System.out.println("Sender is unavailable!");
+        }
     }
 }
 
