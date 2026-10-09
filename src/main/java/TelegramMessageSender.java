@@ -1,4 +1,3 @@
-
 public class TelegramMessageSender implements MessageSender {
 
     private boolean available = true;
