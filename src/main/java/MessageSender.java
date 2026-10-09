@@ -1,4 +1,3 @@
-
 public interface MessageSender {
 
     boolean sendMessage(String recipient, String title, String body);
